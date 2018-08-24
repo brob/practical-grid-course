@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 4: Experiment with Grid in Banners</title>
+
+    <link rel="stylesheet" href="../assets/base-styles.css">
+</head>
+<body>
+    <div class="exercise">
+        <h1 class="exercise__headline">Exercise 4: Experiment with Grid in Banners</h1>
+        <p class="exercise__description">In this exercise, we'll take a flexible grid to create multiple engaging banner "cover screens" for articles or marketing pages. This method allows designers to have very easy art direction over these areas.</p>
+    </div>
+   
+ <section class="promos">
+
+    <div class="promo">
+        <h3 class="promo__headline">This is a headline for a promo space</h3>
+
+        <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac arcu mollis, semper est ac, tincidunt purus. Cras efficitur maximus augue vitae volutpat. Nullam consectetur diam a dictum facilisis. </p>
+
+        <a href="#" class="promo__button">Learn More &raquo;</a>
+        <img class="promo__image" src="https://images.unsplash.com/photo-1521379770009-7bafd3ec7a23?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=ce4848266618366ad30d7d35764c0bf4" alt="Ocean Scape">
+
+    </div>
+
+    <div class="promo even">
+        <h3 class="promo__headline">This is a headline for a promo space</h3>
+
+        <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac arcu mollis, semper est ac, tincidunt purus. Cras efficitur maximus augue vitae volutpat. Nullam consectetur diam a dictum facilisis. </p>
+
+        <a href="#" class="promo__button">Learn More &raquo;</a>
+        
+        <img class="promo__image" src="https://images.unsplash.com/photo-1521379770009-7bafd3ec7a23?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=ce4848266618366ad30d7d35764c0bf4" alt="Ocean Scape">
+
+    </div>
+
+</section>
+
+
+    <style>
+        /* I always recommend styling in a CSS file, but for simplicity, we'll use this style block */
+
+
+        .promo {
+            display: grid;
+            grid-template-columns: [image-start] 1fr [image-end];
+            grid-template-rows: [image-start] 10vh auto auto auto 10vh [image-end];
+            grid-template-areas: '....'
+                                'headline'
+                                'text'
+                                'button'
+                                '....';
+            text-align: center;
+            background-color: #333;
+            color: white;
+        }
+        .promo__image {
+            grid-area: image;
+            z-index: 0;
+            align-self: stretch;
+            object-fit: cover;
+            mix-blend-mode: overlay;
+        }
+        .promo__headline {
+            grid-area: headline;
+            z-index: 1;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            align-self: end;
+        }
+        .promo__text {
+            grid-area: text;
+            z-index: 1;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .promo__button {
+            grid-area: button;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            z-index: 1;
+        }
+
+
+        @media (min-width: 640px) and (max-width: 1024px) {
+            .promos {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .promos {
+                width: 95vw;
+                margin: auto;
+            }
+            .promo {
+                background-color: transparent; /* Turns background color off */
+                color: black; /* Inverts text color */
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: '........ image'
+                                    'headline image'
+                                    'text     image'
+                                    'button   image'
+                                    '........ image';
+                grid-column-gap: 20px;
+                text-align: left;
+
+                
+            }
+            .promo.even {
+                grid-template-areas: 'image ....'
+                                    'image headline'
+                                    'image text'
+                                    'image button' 
+                                    'image ....';
+
+            }
+            .promo__image {
+                object-fit: contain;
+            }       
+        }
+
+
+
+
+        /* VISUAL STYLES */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+        p {
+            line-height: 1.4em;
+            margin-bottom: .75em;
+        }
+        img {
+            max-width: 100%;
+
+        }
+        .promo {
+            margin: 2rem auto;
+        }
+
+        .promo__headline {
+            font-size: 2rem;
+            margin-bottom: .5em;
+        }
+        .promo__button {
+            color: tomato;
+            font-size: 1.5rem;
+            
+        }
+        body {
+            background-image: none;
+        }
+    </style>
+</body>
+</html>
