@@ -1,0 +1,56 @@
+html {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+.exercise {
+    background-color: rgba(255, 255, 255, .8);
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+.exercise__headline {
+    margin: 0 0 .5em;
+}
+.exercise__description {
+
+}
+
+
+
+
+
+
+/* articles */
+       /* BASE STYLES FOR NICER LOOKING FINISHED PRODUCT */
+       body {
+        background-image: linear-gradient(10deg, #5FB0BE, #8DC63F);
+    }
+    img {
+        max-width: 100%;
+    }
+    a {
+        color: #8DC63F;
+        text-decoration: none;
+    }
+    .article {
+        background: #fff;
+        box-shadow: 0px 1px 10px 1px #444;
+    }
+    .article__headline {
+        font-size: 2rem;
+        margin: .75rem;
+    }
+    .article__description {
+        margin: .75rem;
+    }
+    .article__button {
+        display: block;
+        background-color: #5FB0BE;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        transition: background-color .3s ease-out;
+    }
+    .article__button:hover {
+        background-color: #3E8D9B;
+
+    }

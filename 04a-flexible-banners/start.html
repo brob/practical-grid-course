@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 4: Experiment with Grid in Banners</title>
+
+    <link rel="stylesheet" href="../assets/base-styles.css">
+</head>
+<body>
+    <div class="exercise">
+        <h1 class="exercise__headline">Exercise 4: Experiment with Grid in Banners</h1>
+        <p class="exercise__description">In this exercise, we'll take a flexible grid to create multiple engaging banner "cover screens" for articles or marketing pages. This method allows designers to have very easy art direction over these areas.</p>
+    </div>
+   
+    <div class="banner">
+        <h1 class="banner__headline">The Secret World of Urban Forests</h1>
+        
+        <h2 class="banner__subhead">We explore the inner darkness of urban forestry</h2>
+        
+        <h6 class="banner__secondary">Image Courtesy of Unsplash</h6>
+
+    </div>
+
+
+
+    <style>
+        /* I always recommend styling in a CSS file, but for simplicity, we'll use this style block */
+
+        .banner {
+            /* parent element */
+            background-color: #8DC63F;
+            background-image: url(../assets/images/forest.jpg);
+            background-size: cover;
+            background-position: top center;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-gap: 1vw;
+            padding: 1vw;
+        }
+        
+        .banner__headline {
+            grid-column: 4 / 6;
+            grid-row: 2 / 4;
+            align-self: end;
+        }
+        .banner__subhead {
+            grid-column: 3 / 4;
+            grid-row: 2 / 4;
+            align-self: end;
+            text-align: right;
+        }
+        .banner__secondary {
+            grid-column: 4;
+            grid-row: 4;
+            align-self: start;
+        }
+
+
+
+/* Simple styles for visuals */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .banner__headline {
+            text-shadow: 1px 1px 1px #000;
+            color: #fb004b;;
+            font-size: calc(.75rem + 5.5vw);
+            line-height: 1.1em;
+        }
+        .banner__subhead {
+            font-size: calc(.5rem + 2.5vw);
+            line-height: 1.2em;
+            text-shadow: 1px 1px 0px #000;
+            color: #03affb;
+        }
+        .banner__secondary {
+            color: #eee;
+            text-shadow: 1px 1px 0 black;
+            font-weight: normal;
+            font-style: italic;
+            font-size: calc(.75rem + .5vw);
+            line-height: 1.3em;
+        }
+
+ 
+    </style>
+</body>
+</html>
