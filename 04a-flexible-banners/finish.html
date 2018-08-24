@@ -34,8 +34,11 @@
         }
         .banner {
             /* parent element */
-            background-color: #8DC63F;
-            background-image: url(../assets/images/forest.jpg);
+            background-image: url(../assets/images/forest.jpg), 
+                              linear-gradient(to top right, 
+                                            rgba(0,0,0,.8), 
+                                            rgba(242, 213, 11, .3) 75%);
+            background-blend-mode: multiply;
             background-size: cover;
             background-position: top center;
             min-height: 100vh;
@@ -76,6 +79,7 @@
             font-size: calc(.75rem + 4.5vw);
             line-height: 1.3em;
             font-family: 'Stalemate', cursive;
+            font-weight: 300;
         }
         .banner__subhead {
             font-size: calc(.5rem + 1.5vw);
