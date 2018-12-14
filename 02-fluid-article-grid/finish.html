@@ -73,8 +73,8 @@
         .article-grid {
             /* parent element */
             display: grid;
-            grid-gap: 1rem;
             grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            grid-gap: 1rem;
         }
         .article {
             /* child element */ 
@@ -84,8 +84,11 @@
                Instead of the content OUT
             */
             display: grid;
-            align-items: space-between;
+            align-items: start;
         }
+        .article__button {
+            align-self: end;
+        } 
 
     </style>
 </body>
