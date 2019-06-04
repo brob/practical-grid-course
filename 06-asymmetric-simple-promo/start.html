@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bonus Exercise: Create a full-width banner that utilizes asymmetric grids to create an interesting multi-promo space.</title>
+
+    <link rel="stylesheet" href="../assets/base-styles.css">
+</head>
+<body>
+    <div class="exercise">
+        <h1 class="exercise__headline">Bonus Exercise: Create a multi-promo banner</h1>
+        <p class="exercise__description">Create a full-width banner that utilizes asymmetric grids to create an interesting multi-promo space.</p>
+    </div>
+   
+
+    <section class="banner">
+            <a href="#" class="promo">This is a headline for a promo space</a>
+            <a href="#" class="promo">This is a headline for a promo space</a>
+            <a href="#" class="promo">This is a headline for a promo space This is a headline for a promo space This is a headline for a promo space This is a headline for a promo space This is a headline for a promo space</a>
+            <a href="#" class="promo">This is a headline for a promo space</a>
+    </section>
+    
+
+
+    <style>
+        /* I always recommend styling in a CSS file, but for simplicity, we'll use this style block */
+        .banner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: repeat(2, minmax(15vh, auto));
+            grid-template-areas: 'first second second'
+                                 'first third  fourth';
+            grid-gap: 1rem;
+        }
+
+        .promo:nth-child(1) {
+            grid-area: first;
+        }
+        .promo:nth-child(2) {
+            grid-area: second;
+        }
+
+
+        .promo {
+            background-image: url(../assets/images/ride.jpg);
+            background-size: cover;
+            background-color: lightgreen;
+            background-blend-mode: overlay;
+
+            display: block;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            font-size: 2rem;
+        }
+        body {
+            background: white;
+        }
+    </style>
+</body>
+</html>
