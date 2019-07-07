@@ -64,38 +64,6 @@
     <style>
         /* I always recommend styling in a CSS file, but for simplicity, we'll use this style block */
 
-        .article-body {
-            display: grid;
-            grid-template-columns: minmax(2vw, 1fr) minmax(20ch, 100ch) minmax(2vw, 1fr);
-
-        }
-        .article-body > * {
-            grid-column: 2;
-        }
-
-        .full-width {
-            grid-column: 1 / -1;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas: "mainImage second second"
-                                 "mainImage third  fourth";
-            grid-gap: 1rem;
-            align-items: stretch;
-        }
-        .gallery img {
-            object-fit: contain;
-            background-color: black;
-        }
-        .gallery img:first-child {
-            grid-area: mainImage;
-        }
-        .gallery img:nth-child(2) {
-            grid-area: second;
-        }
 
 
         h1 {
