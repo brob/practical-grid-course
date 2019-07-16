@@ -60,39 +60,10 @@
     
     </main>
 
-
-    <style>
+ <style>
         /* I always recommend styling in a CSS file, but for simplicity, we'll use this style block */
 
-        .article-body {
-            display: grid;
-            grid-template-columns: 1fr minmax(25ch, 100ch) 1fr;
-        }
-        .article-body > * {
-            grid-column: 2;
-        }
-        .full-width {
-            grid-column: 1 / -1;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas: "mainImage second second"
-                                 "mainImage third  fourth";
-            grid-gap: 1rem;
-            align-items: stretch;
-        }
-        .gallery img {
-            object-fit: contain;
-            background-color: black;
-        }
-        .gallery img:nth-child(1) {
-            grid-area: mainImage;
-        }
-        .gallery img:nth-child(2) {
-            grid-area: second;
-        }
+
 
         h1 {
             line-height: 1.4em;
